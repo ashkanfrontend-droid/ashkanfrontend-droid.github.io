@@ -383,7 +383,7 @@ header .logo2{margin-left:20px}
 
 
 
-.c_text.c_4 .box{display: flex} 
+.c_text.c_4 .box{display: flex;min-height: 400px;   align-items: center;} 
 
 ul.form{list-style-type: none;margin:0px;padding: 0px;margin-bottom: 15px;}
 
