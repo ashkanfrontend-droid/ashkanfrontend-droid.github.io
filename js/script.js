@@ -2,31 +2,63 @@
 
 
 $(document).ready(function() {
-  $('.navbar-toggler').on('click', function() {
-    setTimeout(function() {
-      if ($('.collapse.navbar-collapse').hasClass('show')) {
-        $('.collapse.navbar-collapse').closest('.col-8').addClass('active');
-        console.log('Navbar geöffnet, active hinzugefügt');
-      } else {
-        $('.collapse.navbar-collapse').closest('.col-8').removeClass('active');
-        console.log('Navbar geschlossen, active entfernt');
+    $('.navbar-toggler').on('click', function() {
+      setTimeout(function() {
+        if ($('.collapse.navbar-collapse').hasClass('show')) {
+          $('.collapse.navbar-collapse').closest('.col-8').addClass('active');
+          console.log('Navbar geöffnet, active hinzugefügt');
+        } else {
+          $('.collapse.navbar-collapse').closest('.col-8').removeClass('active');
+          console.log('Navbar geschlossen, active entfernt');
+        }
+      }, 800); // setTimeout, um sicherzustellen, dass der Toggle abgeschlossen ist
+    });
+
+    $(window).scroll(function() {    
+      var scroll = $(window).scrollTop();
+
+       //>=, not <=
+      if (scroll >= 600) {
+          //clearHeader, not clearheader - caps H
+          $("#header").addClass("sticky");
+
+      }else{
+          $("#header").removeClass("sticky");
       }
-    }, 800); // setTimeout, um sicherzustellen, dass der Toggle abgeschlossen ist
-  });
+  }); //missing );
 
-  $(window).scroll(function() {    
-    var scroll = $(window).scrollTop();
+      // Beim Klick auf das Input-Feld
+    $('.form-floating input').on('focus', function() {
+        $(this).closest('.form-floating').addClass('effect');
+    });
 
-     //>=, not <=
-    if (scroll >= 50) {
-        //clearHeader, not clearheader - caps H
-        $("#header").addClass("sticky");
+    // Beim Verlassen des Input-Felds (Blur)
+    $('.form-floating input').on('blur', function() {
+        // Prüfen, ob das Input-Feld leer ist
+        if ($(this).val().trim() === '') {
+            $(this).closest('.form-floating').removeClass('effect');
+        }
+    });
 
-    }else{
-        $("#header").removeClass("sticky");
-    }
-}); //missing );
-});
+    // Klick außerhalb des Input-Felds
+    $(document).on('click', function(event) {
+        // Wenn das geklickte Element kein Input-Feld und kein Label ist
+        if (!$(event.target).closest('.form-floating input').length && !$(event.target).closest('.form-floating label').length) {
+            $('.form-floating input').each(function() {
+                // Prüfen, ob das Input-Feld leer ist
+                if ($(this).val().trim() === '') {
+                    $(this).closest('.form-floating').removeClass('effect');
+                }
+            });
+        }
+    });
+
+
+
+
+
+
+
 
 
 
@@ -47,8 +79,10 @@ const observer = new IntersectionObserver(entries => {
 
 observer.observe(ring);
 }
+//RING
 
 
+//HOVER Function for RING
 $('#myRing span').hover(
     function() {
       // Mouseover → Klasse hinzufügen
@@ -59,17 +93,23 @@ $('#myRing span').hover(
       $(this).removeClass('hover-aktiv');
     }
 );
+
+
+//Mouseebter Function for RING(Mouseebter)
 $('#myRing span').on('mouseenter', function() {
   $(this).addClass('hover-aktiv');
 }).on('mouseleave', function() {
   $(this).removeClass('hover-aktiv');
 });
 
-const quad = $('.punkt-quadrat');
-  for (let i = 0; i < 30; i++) {
-    quad.append('<div class="square-dot"></div>');
-  }
 
+//Creation of the square
+const quad = $('.punkt-quadrat');
+for (let i = 0; i < 30; i++) {
+  quad.append('<div class="square-dot"></div>');
+}
+
+//Mouseebter Function for SQUARE
 $('.square-dot').on('mouseenter', function() {
   $(this).addClass('hover-aktiv');
 }).on('mouseleave', function() {
@@ -77,6 +117,8 @@ $('.square-dot').on('mouseenter', function() {
 });
 
 
+
+//Quadrat Animation
 const quadrat = document.getElementById('quadrat');
 if (quadrat) {
   const observer_q = new IntersectionObserver(entries => {
@@ -96,7 +138,7 @@ if (quadrat) {
   observer_q.observe(quadrat);
 }
 
-
+//QUADRAT ANIMATION on leistung page
 const quadrat_intro_leistung = document.getElementById('quadrat_intro_leistung');
 if (quadrat_intro_leistung) {
   const observer_q = new IntersectionObserver(entries => {
@@ -118,7 +160,7 @@ if (quadrat_intro_leistung) {
 
 
 
-
+//Define classes and randomly assign them to subelements of RING & Quadrat
 var classes = ['class1', 'class2', 'class3', 'class4', 'class5'];
 
 $('#myRing span').each(function() {
@@ -135,6 +177,8 @@ $('.punkt-quadrat .square-dot').each(function() {
     $(this).addClass(classes[randomIndex]);
 });
 
+
+//Hoverfuncion für mobile mit Mouseenter 
 $('.references .text').on('mouseenter', function() {
   $(this).addClass('aktiv-hover');
 }).on('mouseleave', function() {
@@ -142,6 +186,8 @@ $('.references .text').on('mouseenter', function() {
 });
 
 
+
+//GO back to Home
 $('.goToHomeSeite').on('click', function(){
     window.location.href = '../index.html'; 
   });
@@ -199,34 +245,6 @@ document.querySelectorAll('.punkt-quadrat').forEach(el => {
 
 
 
-
-$(document).ready(function() {
-    // Beim Klick auf das Input-Feld
-    $('.form-floating input').on('focus', function() {
-        $(this).closest('.form-floating').addClass('effect');
-    });
-
-    // Beim Verlassen des Input-Felds (Blur)
-    $('.form-floating input').on('blur', function() {
-        // Prüfen, ob das Input-Feld leer ist
-        if ($(this).val().trim() === '') {
-            $(this).closest('.form-floating').removeClass('effect');
-        }
-    });
-
-    // Klick außerhalb des Input-Felds
-    $(document).on('click', function(event) {
-        // Wenn das geklickte Element kein Input-Feld und kein Label ist
-        if (!$(event.target).closest('.form-floating input').length && !$(event.target).closest('.form-floating label').length) {
-            $('.form-floating input').each(function() {
-                // Prüfen, ob das Input-Feld leer ist
-                if ($(this).val().trim() === '') {
-                    $(this).closest('.form-floating').removeClass('effect');
-                }
-            });
-        }
-    });
-});
 
 
 
@@ -288,3 +306,15 @@ $sl_2.on('click', function () {
 
 // Auto-Slider starten
 play();
+
+
+
+
+
+
+
+
+
+
+
+});
