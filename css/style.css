@@ -185,7 +185,7 @@ a:hover{color:var(--black);text-decoration: underline;}
 .colorLightBlue{color:var(--colorLightBlue)}
 
 
-.c_titel h6{letter-spacing: 0.8px;font-weight: 500; text-transform: uppercase;}
+.c_titel h3, .c_titel h2{letter-spacing: 0.8px;font-weight: 500; text-transform: uppercase;    font-size: 16px;}
 
 .effect .form-label{color: var(--black);}
 .form-control{color: var(--black);border-color: var(--black);}
@@ -337,11 +337,11 @@ header .logo2{margin-left:20px}
 .c_1 h2{text-align: center;}
 
 .c_2{padding-top: 80px;padding-bottom: 80px}
-.c_2 h6{text-align: center;}
+.c_2 h2,.c_2 h3{text-align: center;    color: var(--hyperlinkColor);}
 
 
 .c_text h1{font-size: 48px; font-weight: 600;margin-bottom: 20px;margin-top:0px}
-.c_3 h4{margin-bottom: 10px}
+.c_3 h2{margin-bottom: 10px}
 .c_3 .textarea{}
 
 .c_3 ul.form{margin: 0px auto;}
@@ -795,7 +795,7 @@ background: rgba(255, 255, 255, 0.7);
 .swiper-slide.swiper-slide-next .contents{min-height: 150px;}
 .swiper-container .swiper-slide.swiper-slide-prev h3,
 .swiper-container .swiper-slide.swiper-slide-next h3{font-size: 16px}
-
+.c_3 h2{    font-size: 20px;}
 /* Responsive Anpassungen */
 @media (max-aspect-ratio: 16/9) {
   video {
@@ -966,7 +966,7 @@ background: rgba(255, 255, 255, 0.7);
   .c_3 .m_right .textarea{text-align: left}
 
   .c_text h1{font-size: 48px;font-weight: 600;margin-bottom: 40px;margin-top:0px}
-  .c_3 h4{margin-bottom: 40px;}
+  .c_3 h2{margin-bottom: 40px;}
 
 
 
@@ -1076,9 +1076,12 @@ background: rgba(255, 255, 255, 0.7);
     box-shadow: none;
   }
 
+  .visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+
   header button.navbar-toggler{border-width: 0px}
   .c_intro.c_home h1, h1{font-size: 32px !important}
-  .c_3 h4, h4{font-size: 16px !important}
+ h4{font-size: 16px !important}
+   .c_3 h2{    font-size: 16px;}
   .c_intro.c_home .textarea{margin:0px}
 
   .navbar button.navbar-toggler{margin-left: auto}
@@ -1129,7 +1132,7 @@ background: rgba(255, 255, 255, 0.7);
   .c_intro.c_home .singleModule{width: 100%}
   .c_intro.c_home .balls{margin: 0px auto 40px;}
   .c_intro.c_home .singleModule.m_balls{text-align: center;}
-  .c_3 h4{margin-bottom: 20px}
+  .c_3 h2{margin-bottom: 20px}
 
 
 }
