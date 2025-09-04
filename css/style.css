@@ -133,13 +133,16 @@ body {
   color:var(--black);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: var(--bs-gray-100);
+  background-color: var(--white);
 }
 h1,h2,h3,h4,h5,h6{font-weight: 400; line-height: 1.4;color: var(--black);margin:0px;padding:0px}
 h1{font-size: 48px;font-weight: 400; line-height: 1.4;color: var(--black);}
 h2{font-size: 32px}
 h3{font-size: 24px}
-h4{font-size: 20px}
+.c_form_intro h2{    font-size: 24px;}
+.c_form h3, .c_form h4{font-size: 20px}
+.c_form h3{padding-bottom: 25px;}
+h4, h3.m_2{font-size: 20px}
 h6{font-size: 16px;color:var(--hyperlinkColor);}
 
 .c_intro.c_leistung h1{font-size: 32px}
@@ -337,11 +340,19 @@ header .logo2{margin-left:20px}
 .c_1 h2{text-align: center;}
 
 .c_2{padding-top: 80px;padding-bottom: 80px}
-.c_2 h2,.c_2 h3{text-align: center;    color: var(--hyperlinkColor);}
+.c_2 h2,.c_2 h3, .c_2 h4, .c_2 h5{
+  text-align: center;
+  color: var(--hyperlinkColor);
+  letter-spacing: 0.8px;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 16px
+}
 
 
-.c_text h1{font-size: 48px; font-weight: 600;margin-bottom: 20px;margin-top:0px}
-.c_3 h2{margin-bottom: 10px}
+.c_text.c_3 h4{font-size: 48px; font-weight: 600;margin-bottom: 20px;margin-top:0px}
+.c_text.c_3 h4.h2_2{    font-size: 20px;    margin-bottom: 10px;font-weight: 400}
+.c_3 h4{margin-bottom: 10px}
 .c_3 .textarea{}
 
 .c_3 ul.form{margin: 0px auto;}
@@ -349,6 +360,7 @@ header .logo2{margin-left:20px}
 
 
 .c_text.c_4 .box{display: flex;min-height: 400px;   align-items: center;} 
+.c_4 h3{font-size: 48px; font-weight: 600;   margin-bottom: 20px;   margin-top: 0px; line-height: 1.4;color: var(--black);}
 
 ul.form{list-style-type: none;margin:0px;padding: 0px;margin-bottom: 15px;}
 
@@ -423,10 +435,12 @@ ul.form2Balls li.class4{width:12px;height: 12px;}
 .swiper-slide.swiper-slide-active img.colored,
 .references .text.aktiv-hover img.colored{display: none}
 .references .text.aktiv-hover img.white,
-.swiper-slide-active img.white{display: block}
+.swiper-slide-active img.white{display: block;     margin-left: 0px;}
 /*.references .text.aktiv-hover img.white{margin-left: 0px}*/
 .swiper-slide .singleImage{text-align: center;}
 .swiper-slide .singleImage img{margin: 0px auto;}
+.swiper-slide.swiper-slide-active h4{/*font-size: 32px;line-height: 1.25;font-weight: 400;*/ color: var(--white);}
+.swiper-slide h4{font-size: 24px;line-height: 1.25;font-weight: 400}
 
 /*.references .text.aktiv-hover svg path{fill:var(--white);}*/
 /*.text.aktiv-hover svg g{fill:var(--hyperlinkColor);}*/
@@ -461,14 +475,20 @@ ul.form2Balls li.class4{width:12px;height: 12px;}
 
 
 
-.c_image_text h1{font-weight: 600;line-height: 1.2; margin-bottom: 34px}
+
 .c_image_text h4{margin-bottom: 60px}
 
 .c_image_text img{border-radius: 20px}
 
 .c_image_text .box{display: flex;padding: 0px}
 
-
+.c_image_text h5{
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 34px;
+  font-size: 48px;
+}
+.c_image_text h5.h5_2{font-size: 20px;    margin-bottom: 60px;font-weight: 400; line-height: 1.4}
 
 #divSlider .set {
     display: none;
@@ -626,7 +646,7 @@ ul.form2Balls li.class4{width:12px;height: 12px;}
 .punkt-quadrat:hover .balls_pulse,.punkt-quadrat:active .balls_pulse{background-color: var(--hyperlinkColor);}
 
 
-.kontakt .c_intro.c_form_intro{padding-bottom: 90px}
+.kontakt .c_intro.c_form_intro{padding-bottom: 90px;padding-top: 60px}
 #innerContent.container .containerRow.c_form{padding-top: 90px;padding-bottom: 40px}
 #innerContent.container .containerRow.c_form h4{padding-bottom: 25px}
 #innerContent.container .containerRow.c_btn{padding-top: 0px;padding-bottom: 90px}
@@ -642,6 +662,7 @@ ul.form2Balls li.class4{width:12px;height: 12px;}
   top: -7px;
   left: 4px;
 }
+.kontakt .c_form h4{margin-bottom: 25px}
 .kontakt .c_btn{text-align: center;}
 .kontakt .c_form .box{display: flex;padding-right:0px;padding-left:0px }
 .kontakt .box{padding-right:0px;padding-left:0px }
@@ -738,7 +759,7 @@ background: rgba(255, 255, 255, 0.7);
 
 .swiper-container {
     width: 100%;
-    height: 300px; /* Höhe anpassen, je nach Bedarf */
+    /*height: 300px; /* Höhe anpassen, je nach Bedarf */
     overflow: hidden; /* Ermöglicht das Zeigen partialer Slides */
     padding-bottom: 60px;
 }
@@ -747,12 +768,12 @@ background: rgba(255, 255, 255, 0.7);
     height: 100%;
     display: flex;
     align-items: start;
-    justify-content: center;
+    justify-content: left;
     background-color: var(--grayHeader);
     color: white;
     border-radius: 20px;
-    text-align: center;
-    padding: 20px;
+    text-align: left;    
+    padding: 30px 25px;
     box-sizing: border-box;
     transition: transform 0.3s ease; /* Sanfte Übergänge */
 }
@@ -785,6 +806,7 @@ background: rgba(255, 255, 255, 0.7);
 .swiper-container .swiper-slide-active.swiper-slide .contents {    min-height: 200px; /* Passe die Höhe an, je nach Bedarf */}
 .swiper-slide .textarea {
     order: 1;
+    margin-bottom: 0px;
 }
 
 .swiper-slide .singleImage {
@@ -795,7 +817,7 @@ background: rgba(255, 255, 255, 0.7);
 .swiper-slide.swiper-slide-next .contents{min-height: 150px;}
 .swiper-container .swiper-slide.swiper-slide-prev h3,
 .swiper-container .swiper-slide.swiper-slide-next h3{font-size: 16px}
-.c_3 h2{    font-size: 20px;}
+.c_3 h4{    font-size: 20px;}
 /* Responsive Anpassungen */
 @media (max-aspect-ratio: 16/9) {
   video {
@@ -817,7 +839,8 @@ background: rgba(255, 255, 255, 0.7);
 .c_team .block{border-radius: 20px;background: #F5F5F5;padding: 30px}
 .c_team .box{display: flex}
 
-
+.c_team h4{font-size: 16px;margin-bottom: 16px}
+.c_team h5{font-size: 32px;line-height: 1.4}
 
 @media (min-width: 1940px) {
   .containerRow.c_team .box{max-width: 1320px;}
@@ -863,49 +886,52 @@ background: rgba(255, 255, 255, 0.7);
 
 }
 @media (min-width: 992px) {
-#innerContent .containerRow.s_text_sp{padding-top:80px ;padding-bottom: 80px}
-#innerContent .containerRow.c_team{padding-bottom: 80px}
-.s_text_sp .textarea{max-width: 900px; margin: 0px auto;}
+  .swiper-slide .textarea {  margin-bottom: 45px;}
+   .swiper-slide.swiper-slide-active .textarea {  margin-bottom: 75px;}
+  
+  .c_image_text h5{  margin-bottom: 40px; font-size: 48px;}
 
-.c_video .text{bottom: 0px; left:0px; margin-bottom: 55px; margin-left: 55px}
-.c_form .m_text{padding-right: 50px;}
-.c_intro.c_home .singleModule:nth-child(1){
-  flex: 0 0 auto;
-  display: flex;
-  flex-direction: column; /* Child-Elemente untereinander */
-  justify-content: center; /* Vertikale Zentrierung */
-  /* Optional: Für bessere Visualisierung */
-  min-height: 100px; /* Stellt sicher, dass der Container eine Höhe hat */
- 
+  #innerContent .containerRow.s_text_sp{padding-top:80px ;padding-bottom: 80px}
+  #innerContent .containerRow.c_team{padding-bottom: 80px}
+  .s_text_sp .textarea{max-width: 900px; margin: 0px auto;}
 
-}
+  .c_video .text{bottom: 0px; left:0px; margin-bottom: 55px; margin-left: 55px}
+  .c_form .m_text{padding-right: 50px;}
+  .c_intro.c_home .singleModule:nth-child(1){
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column; /* Child-Elemente untereinander */
+    justify-content: center; /* Vertikale Zentrierung */
+    /* Optional: Für bessere Visualisierung */
+    min-height: 100px; /* Stellt sicher, dass der Container eine Höhe hat */
+   
+
+  }
 
 
   .c_intro.c_home .textarea{ }
 
   .c_intro.c_leistung .mc2{
-  flex: 0 0 auto;
-  display: flex; /* Macht .col-7 zu einem Flex-Container */
-  align-items: center; /* Zentriert Child-Elemente vertikal */
-  min-height: 100px;
-}
+    flex: 0 0 auto;
+    display: flex; /* Macht .col-7 zu einem Flex-Container */
+    align-items: center; /* Zentriert Child-Elemente vertikal */
+    min-height: 100px;
+  }
 
 
-.c_intro.c_leistung .mc1{
+  .c_intro.c_leistung .mc1{
 
-  flex: 0 0 auto;
-  width: 41.66666667%;
-  display: flex;
-  justify-content: flex-start;
-}
+    flex: 0 0 auto;
+    width: 41.66666667%;
+    display: flex;
+    justify-content: flex-start;
+  }
 
   .balls{display: block}
 
   /*NAVBAR*/
   .navbar-expand-lg .navbar-nav .nav-link,
-  .navbar-expand-lg .navbar ul li.nav-item a{
-    Padding:6px 16px;
-  }
+  .navbar-expand-lg .navbar ul li.nav-item a{    Padding:6px 16px;  }
 
 
   .navbar ul li.nav-item {    margin-left: 8px;  }
@@ -965,10 +991,12 @@ background: rgba(255, 255, 255, 0.7);
 
   .c_3 .m_right .textarea{text-align: left}
 
-  .c_text h1{font-size: 48px;font-weight: 600;margin-bottom: 40px;margin-top:0px}
-  .c_3 h2{margin-bottom: 40px;}
+  .c_text.c_3 h4{font-size: 48px;font-weight: 600;margin-bottom: 40px;margin-top:0px}
 
 
+  .c_text.c_3 h4.h2_2{    font-size: 20px;    margin-bottom: 40px;}
+
+  .c_4 h3{ margin-bottom: 40px; }
 
   #innerContent .containerRow.c_4{padding-top: 40px;padding-bottom: 130px}
 
@@ -984,18 +1012,12 @@ background: rgba(255, 255, 255, 0.7);
 
   /*Footer*/
   footer .containerRow{padding-top: 200px;padding-bottom: 40px }
-  footer .image {
-    /* bleibt links */
-  }
+  footer .image {    /* bleibt links */  }
 
-  footer .cap {
-    margin-left: auto; /* schiebt Element ganz nach rechts */
-  }
+  footer .cap {    margin-left: auto; /* schiebt Element ganz nach rechts */  }
   footer .textarea{text-align: right}
   footer p{margin-bottom: 0px;margin-top:30px}
-  footer p:nth-child(2){
-    margin-left:20px;
-  }
+  footer p:nth-child(2){    margin-left:20px;  }
 
   .c_text.c_3 .singleModule:nth-child(2){    padding-left: 45px;}
 
@@ -1034,6 +1056,9 @@ background: rgba(255, 255, 255, 0.7);
 
 }
 @media (max-width: 991px) {
+  .c_team h5{font-size: 24px}
+  .c_4 h3{font-size: 32px;line-height: 1.2}
+  .c_text.c_3 h4{font-size: 32px}
   .navbar-nav li.contact .nav-link{display: inline-block;}
 .c_video .text{
       bottom: 0px;
@@ -1081,7 +1106,7 @@ background: rgba(255, 255, 255, 0.7);
   header button.navbar-toggler{border-width: 0px}
   .c_intro.c_home h1, h1{font-size: 32px !important}
  h4{font-size: 16px !important}
-   .c_3 h2{    font-size: 16px;}
+   .c_3 h4{    font-size: 16px;}
   .c_intro.c_home .textarea{margin:0px}
 
   .navbar button.navbar-toggler{margin-left: auto}
@@ -1132,7 +1157,9 @@ background: rgba(255, 255, 255, 0.7);
   .c_intro.c_home .singleModule{width: 100%}
   .c_intro.c_home .balls{margin: 0px auto 40px;}
   .c_intro.c_home .singleModule.m_balls{text-align: center;}
-  .c_3 h2{margin-bottom: 20px}
+  .c_3 h4{margin-bottom: 20px}
+
+  .c_text.c_3 h4.h2_2{font-size: 16px;margin-bottom: 20px;}
 
 
 }
@@ -1199,7 +1226,11 @@ background: rgba(255, 255, 255, 0.7);
 
 /* Responsiv kleiner machen */
 @media (max-width: 480px){
+  .c_4 h3,
+  .c_image_text h5{font-size: 28px}
+  .c_image_text h5.h5_2{font-size: 16px}
   .c_intro.c_home h1, h1 {        font-size: 28px !important;    }
+  .c_text.c_3 h4{font-size: 28px}
   #innerContent .containerRow{}
   .punkt-quadrat { gap: 20px;  }
   .references .singleModule{width:100%;max-width: 380px}
