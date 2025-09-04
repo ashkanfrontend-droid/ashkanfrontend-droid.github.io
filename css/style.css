@@ -850,7 +850,7 @@ background: rgba(255, 255, 255, 0.7);
   .c_intro.c_home .textarea { margin-left:320px;      max-width: 600px;}
   .c_intro.c_home h1{padding-right: 108px;}
   .c_intro.c_home p { padding-right: 240px;}
-  #innerContent .containerRow.clients{  padding-left: 170px; padding-right: 170px; padding-bottom: 120px;  }
+  
   .containerRow .singleModule.m_left{padding-right: 60px;}
   .containerRow.c_image_text .singleModule:nth-child(1){padding-right: 40px}
    .containerRow.c_image_text .singleModule:nth-child(2){padding-left: 40px}
@@ -888,6 +888,7 @@ background: rgba(255, 255, 255, 0.7);
 
 }
 @media (min-width: 992px) {
+  #innerContent .containerRow.clients{  padding-left: 170px; padding-right: 170px; padding-bottom: 120px;  }
   .swiper-slide .textarea {  margin-bottom: 45px;}
    .swiper-slide.swiper-slide-active .textarea {  margin-bottom: 75px;}
   
