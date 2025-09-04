@@ -648,7 +648,7 @@ ul.form2Balls li.class4{width:12px;height: 12px;}
 .punkt-quadrat:hover .balls_pulse,.punkt-quadrat:active .balls_pulse{background-color: var(--hyperlinkColor);}
 
 
-.kontakt .c_intro.c_form_intro{padding-bottom: 90px;padding-top: 60px}
+.kontakt .c_intro.c_form_intro{padding-bottom: 40px;padding-top: 40px}
 #innerContent.container .containerRow.c_form{padding-top: 90px;padding-bottom: 40px}
 #innerContent.container .containerRow.c_form h4{padding-bottom: 25px}
 #innerContent.container .containerRow.c_btn{padding-top: 0px;padding-bottom: 90px}
@@ -820,6 +820,10 @@ background: rgba(255, 255, 255, 0.7);
 .swiper-container .swiper-slide.swiper-slide-prev h3,
 .swiper-container .swiper-slide.swiper-slide-next h3{font-size: 16px}
 .c_3 h4{    font-size: 20px;}
+
+
+.kontakt .c_btn{padding-bottom: 70px}
+
 /* Responsive Anpassungen */
 @media (max-aspect-ratio: 16/9) {
   video {
@@ -888,6 +892,9 @@ background: rgba(255, 255, 255, 0.7);
 
 }
 @media (min-width: 992px) {
+  .kontakt .c_form{ padding-bottom: 30px;   padding-top: 120px;}
+  .kontakt .c_btn{padding-bottom: 100px}
+  .kontakt .c_intro.c_form_intro {  padding-bottom: 100px;   padding-top: 90px;}
   #innerContent .containerRow.clients{  padding-left: 170px; padding-right: 170px; padding-bottom: 120px;  }
   .swiper-slide .textarea {  margin-bottom: 45px;}
    .swiper-slide.swiper-slide-active .textarea {  margin-bottom: 75px;}
