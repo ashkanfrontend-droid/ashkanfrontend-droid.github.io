@@ -300,6 +300,7 @@ header .logo2{margin-left:20px}
 .navbar-expand-lg .navbar-nav .nav-link:hover{text-decoration: underline;--bs-link-color-rgb: var(--black);color: inherit;}
 .nav-link:focus-visible {    outline: 0;    box-shadow:none;}
 .navbar-expand-lg .navbar-nav .contact .nav-link:hover, .navbar-expand-lg .navbar-nav .contact.active .nav-link{text-decoration: none; background-color: var(--black);color: var(--white);cursor: pointer;}
+.navbar-expand-lg .navbar-nav .contact.active .nav-link{cursor: default;}
 .navbar ul li.nav-item {}
 .navbar-expand-lg .navbar ul li.nav-item a{
   font-size: 16px;
@@ -892,6 +893,7 @@ background: rgba(255, 255, 255, 0.7);
 
 }
 @media (min-width: 992px) {
+  .navbar-expand-lg{margin-top: 10px}
   .kontakt .c_form{ padding-bottom: 30px;   padding-top: 120px;}
   .kontakt .c_btn{padding-bottom: 100px}
   .kontakt .c_intro.c_form_intro {  padding-bottom: 100px;   padding-top: 90px;}
